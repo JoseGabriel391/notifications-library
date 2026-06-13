@@ -1,15 +1,19 @@
 package com.notifications;
 
+import com.notifications.example.NotificationExamples;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 public class MainTest {
 
     @Test
-    void shouldReturnFalse() {
+    void shouldRunExampleWithoutErrors() {
 
-        assertFalse(false);
+        assertDoesNotThrow(
+                () -> NotificationExamples.main(new String[]{})
+        );
     }
 }

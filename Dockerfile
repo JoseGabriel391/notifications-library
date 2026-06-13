@@ -5,3 +5,5 @@ WORKDIR /app
 COPY . .
 
 RUN mvn clean package -DskipTests
+
+CMD ["java", "-cp", "target/classes", "com.notifications.example.NotificationExamples"]
